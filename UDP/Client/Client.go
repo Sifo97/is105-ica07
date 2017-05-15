@@ -13,7 +13,7 @@ func CheckError(err error) {
 }
  
 func main() {
-    ServerAddr,err := net.ResolveUDPAddr("udp","192.168.1.129:10001")
+    ServerAddr,err := net.ResolveUDPAddr("udp","CHANGEME:27015")
     CheckError(err)
  
     LocalAddr, err := net.ResolveUDPAddr("udp", "192.168.1.129:0")
