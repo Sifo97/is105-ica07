@@ -1,3 +1,4 @@
+//Orginal kode hentet fra:
 // https://systembash.com/a-simple-go-tcp-server-and-tcp-client/
 package main
 
@@ -9,7 +10,7 @@ import "os"
 func main() {
 
   // connect to this socket
-  conn, _ := net.Dial("tcp", "127.0.0.1:27015")
+  conn, _ := net.Dial("tcp", "82.164.223.240:27015")
   for { 
     // read in input from stdin
     reader := bufio.NewReader(os.Stdin)

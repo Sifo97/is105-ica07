@@ -1,3 +1,4 @@
+//Orginal kode hentet fra
 // https://systembash.com/a-simple-go-tcp-server-and-tcp-client/
 package main
 
