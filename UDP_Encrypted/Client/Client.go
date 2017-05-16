@@ -33,7 +33,6 @@ log.Fatal(err)
     CheckError(err)
  
     defer Conn.Close()	
-        Conn.Write([]byte(key))
 		Conn.Write([]byte(chipertext))
         if err != nil {
             fmt.Println(err)

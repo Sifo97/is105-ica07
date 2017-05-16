@@ -22,22 +22,20 @@ func main() {
 	
     ServerAddr,err := net.ResolveUDPAddr("udp","127.0.0.1:27015")
     CheckError(err)
- 
+	key := []byte("a very very very very secret key") // must be 32 bytes
     /* Now listen at selected port */
     ServerConn, err := net.ListenUDP("udp", ServerAddr)
     CheckError(err)
     defer ServerConn.Close()
  
-    buf := make([]byte, 1024)
+   var buf []byte = make([]byte, 1500)
  
     for {
-		key,addr,err := ServerConn.ReadFromUDP(buf) // server key
 		chipmsg,addr,err := ServerConn.ReadFromUDP(buf) // chip message
-        //n,addr,err := ServerConn.ReadFromUDP(buf)
-        fmt.Println("Received ",string(buf[0:key]), " from ",addr)
-		fmt.Println("Received ",string(buf[0:chipmsg]), " from ",addr)
-		plaintext, err := crypt.Decrypt(key1,chipmsg)
-		fmt.Println(key)
+		fmt.Println("Received(ENCRYPTED):",string(buf[0:chipmsg]), " from ",addr)
+		fmt.Println("Attempting to decrypt...")
+		plaintext, err := crypt.Decrypt(key, buf[0:chipmsg])
+		fmt.Println("Decrypted message: ", string(plaintext))
         if err != nil {
             fmt.Println("Error: ",err)
         } 
