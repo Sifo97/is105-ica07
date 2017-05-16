@@ -1,3 +1,4 @@
+// http://stackoverflow.com/questions/18817336/golang-encrypting-a-string-with-aes-and-base64
 package crypt
 import (
     "crypto/aes"
