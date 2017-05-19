@@ -1,5 +1,8 @@
 # ICA07
 
+## Redigere ip-addresser-
+
+
 ## UDP 
 Start `server.go` med kommadoen `go run server.go` i mappa UDP/Server/ 
 
