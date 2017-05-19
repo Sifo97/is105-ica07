@@ -10,7 +10,7 @@ import "os"
 func main() {
 
   // connect to this socket
-  conn, _ := net.Dial("tcp", "82.164.223.240:27015")
+  conn, _ := net.Dial("tcp", "localhost:27015")
   for { 
     // read in input from stdin
     reader := bufio.NewReader(os.Stdin)
