@@ -1,9 +1,15 @@
 # ICA07
 
-## Redigere ip-addresser-
-
-
 ## UDP 
+Åpne opp server.go i mappen UDP/Server/
+
+Bytt ut `192.168.1.129` med din IP-Addresse
+
+Åpne opp client.go i mappen UDP/Client/
+
+Bytt ut `CHANGEME:27015` med serveren sin IP-addresse og port-nummer
+
+Bytt ut `192.168.1.129:0` med din Ip-addresse.
 Start `server.go` med kommadoen `go run server.go` i mappa UDP/Server/ 
 
 Start `Client.go` med kommadoen `go run Client.go` i mappa UDP/Client
